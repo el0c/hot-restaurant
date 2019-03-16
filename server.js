@@ -7,7 +7,7 @@ const PORT = 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-require("./routes")(app)
+require("./routes")(app);
 
 // Starts the server to begin listening
 // =============================================================

@@ -17,9 +17,13 @@ module.exports = function(app) {
 
     app.get("/api/tables", function(req, res) {
         return res.json(tables);
-    })
+    });
 
     app.get("/api/waitlist", function(req, res) {
         return res.json(waitlist);
-    })
+    });
+
+    app.get('*', function(req, res){
+        res.status(404).send('Something went wrong...');
+    });
 };
