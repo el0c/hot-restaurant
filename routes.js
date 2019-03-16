@@ -1,7 +1,11 @@
 var path = require('path');
 
 var waitlist = require('./api/waitlist');
+<<<<<<< HEAD
 var tables = require('./api/tables.js');
+=======
+var tables = require('./api/tables');
+>>>>>>> 68546f78745c6c380bfaa7adc055968248bdfe29
 
 module.exports = function(app) {
 
@@ -25,6 +29,7 @@ module.exports = function(app) {
     app.get("/api/waitlist", function(req, res) {
         return res.json(waitlist);
     });
+
 
     app.get('*', function(req, res){
         res.status(404).send('Something went wrong...');
