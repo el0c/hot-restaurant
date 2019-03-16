@@ -1,7 +1,11 @@
 var path = require('path');
 
 var waitlist = require('./api/waitlist');
+<<<<<<< HEAD
+var tables = require('./api/tables.js');
+=======
 var tables = require('./api/tables');
+>>>>>>> 68546f78745c6c380bfaa7adc055968248bdfe29
 
 module.exports = function(app) {
 
