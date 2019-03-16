@@ -26,6 +26,29 @@ module.exports = function(app) {
         return res.json(waitlist);
     });
 
+    app.post("/api/tables", function(req, res) {
+        // req.body hosts is equal to the JSON post sent from the user
+        // This works because of our body parsing middleware
+        var newTable = req.body;
+        
+        console.log(newTable);
+        
+        tables.push(newTable);
+        
+        res.json(newTable);
+    });
+
+    app.post("/api/waitlist", function(req, res) {
+        // req.body hosts is equal to the JSON post sent from the user
+        // This works because of our body parsing middleware
+        var newWait = req.body;
+        
+        console.log(newWait);
+        
+        waitlist.push(newWait);
+        
+        res.json(newWait);
+    });
 
     app.get('*', function(req, res){
         res.status(404).send('Something went wrong...');
