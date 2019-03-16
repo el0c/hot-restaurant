@@ -1,4 +1,5 @@
 var express = require('express');
+var path = require('path');
 
 var app = express()
 const PORT = 3000;
@@ -8,15 +9,15 @@ app.use(express.json());
 
 
 app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "index.html"));
+    res.sendFile(path.join(__dirname, "./index.html"));
 });
 
 app.get("/table", function(req, res) {
-    res.sendFile(path.join(__dirname, "table.html"));
+    res.sendFile(path.join(__dirname, "./tables.html"));
 });
 
 app.get("/reserve", function(req, res) {
-    res.sendFile(path.join(__dirname, "reserve.html"));
+    res.sendFile(path.join(__dirname, "./reserve.html"));
 });
 
 // Starts the server to begin listening
@@ -24,4 +25,3 @@ app.get("/reserve", function(req, res) {
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
 });
-  
